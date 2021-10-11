@@ -4,9 +4,9 @@ services:
   jait_front:
     hostname: jait_httpd
     container_name: jait_httpd
-    image: httpd
+    image: jait_httpd
     ports:
-      - 80:80
+      - 8080:80
   jait_bdd:
     hostname: jait_mysql
     container_name: jait_mysql
@@ -20,5 +20,5 @@ services:
     container_name: jait_express
     image: jait_express
     ports:
-      - 8080:8080
+      - 5050:5050
 
