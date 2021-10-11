@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  jait_front:
+    hostname: jait_httpd
+    container_name: jait_httpd
+    image: httpd
+    ports:
+      - 80:80
+  jait_bdd:
+    hostname: jait_mysql
+    container_name: jait_mysql
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD="password"
+    ports:
+      - 3306:3306 
+  jait_back:
+    hostname: jait_express
+    container_name: jait_express
+    image: jait_express
+    ports:
+      - 8080:8080
+
